@@ -16,7 +16,7 @@ function templateBody(fields) {
     `Role: ${fields.role}`,
     `Industry: ${fields.industry}`,
     `Company size: ${fields.size}`,
-    fields.contact ? `Contact email: ${fields.contact}` : "Contact email: (not provided)",
+    //fields.contact ? `Contact email: ${fields.contact}` : "Contact email: (not provided)",
     "",
     "1) What audit/compliance question are you trying to answer?",
     fields.auditq,
@@ -24,11 +24,11 @@ function templateBody(fields) {
     "2) What would make this a non-starter (legal, privacy, technical)?",
     fields.blockers,
     "",
-    "Thanks."
+    "Thank you,"
   ].join("\n");
 }
 
-(function() {
+(function () {
   const form = document.getElementById("interestForm");
   const copyLink = document.getElementById("copyTemplate");
 
@@ -37,7 +37,7 @@ function templateBody(fields) {
       role: document.getElementById("role").value,
       industry: document.getElementById("industry").value,
       size: document.getElementById("size").value,
-      contact: document.getElementById("contact").value.trim(),
+      //contact: document.getElementById("contact").value.trim(),
       auditq: document.getElementById("auditq").value.trim(),
       blockers: document.getElementById("blockers").value.trim(),
       consent: document.getElementById("consent").checked
@@ -76,7 +76,7 @@ function templateBody(fields) {
       role: fields.role || "(your role)",
       industry: fields.industry || "(your industry)",
       size: fields.size || "(company size)",
-      contact: fields.contact || "",
+      //contact: fields.contact || "",
       auditq: fields.auditq || "(answer here)",
       blockers: fields.blockers || "(answer here)",
       consent: true
